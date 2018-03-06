@@ -1,0 +1,11 @@
+from setuptools import setup
+
+setup(name='bayesnet_em',
+    version='0.1',
+    description='Fill in data of a single hidden node using the EM algorithm',
+    url='https://github.com/nnvutisa/EM_BayesNet',
+    author='Nalin V',
+    author_email='nnvutisa@gmail.com',
+    license='',
+    packages=['bayesnet_em'],
+    zip_safe=False)
