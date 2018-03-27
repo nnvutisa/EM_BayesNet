@@ -23,6 +23,8 @@ bayesnet_em takes an already constructed and initialized `BayesianNetwork` objec
 ### Example
 Let's use a simple example. Suppose there is a bag of fruits that contains apples and bananas. The observed variables for each sample taken from the bag are color, taste, and shape, while the label of the type of fruits was not recorded. We would like to predict the type of fruits for each sample along with the full probability distribution. This can be represented by a Bayesian network as:
 
+![alt text](bayesnet_em/example.png)
+
 This simple relationship describes a naive Bayes model. The full joint probability distribution is
 > P(F,C,T,S) = P(F)\*P(C|F)\*P(T|F)\*P(S|F)
 
