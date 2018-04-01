@@ -20,6 +20,31 @@ Pomegranade currently supports a discrete Baysian network. Each node represents 
 
 bayesnet_em takes an already constructed and initialized `BayesianNetwork` object, a data array, and the index of the hidden node, and returns a complete data set.
 
+### Function Call
+```
+def em_bayesnet(model, data, ind_h, max_iter = 50, criteria = 0.005):
+    """Returns the data array with the hidden node filled in.
+    (model is not modified.)
+    Parameters
+    ----------
+    model : a BayesianNetwork object
+        an already baked BayesianNetwork object with initialized parameters
+    data : an ndarray
+        each column is the data for the node in the same order as the nodes in the model
+        the hidden node should be a column of NaNs        
+    ind_h : int
+        index of the hidden node      
+    max_iter : int
+        maximum number of iterations        
+    criteria : float between 0 and 1
+        the change in probability in consecutive iterations, below this value counts as convergence      
+    Returns
+    -------
+    data : an ndarray
+        the same data arary with the hidden node column filled in
+    """
+```
+
 ### Example
 Let's use a simple example. Suppose there is a bag of fruits that contains apples and bananas. The observed variables for each sample taken from the bag are color, taste, and shape, while the label of the type of fruits was not recorded. We would like to predict the type of fruits for each sample along with the full probability distribution. This can be represented by a Bayesian network as:
 
